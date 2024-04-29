@@ -1,0 +1,24 @@
+Resources:
+  MainSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: "abcd"
+      GroupDescription: "asdasda"
+      VpcId: "asasda"
+      Tags:
+        - Key: "environment"
+          Value: "dev"
+        - Key: "service"
+          Value: "hello"
+        - Key: "resource"
+          Value: "storage"
+        - Key: "newtag"
+          Value: "monday"
+  MainEgress:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: "sas"
+      DestinationSecurityGroupId: "asa"
+      ToPort: 443
+      FromPort: 443
+      IpProtocol: tcp

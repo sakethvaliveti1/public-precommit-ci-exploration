@@ -1,0 +1,44 @@
+Resources:
+  S3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      Tags:
+        - Key: "environment"
+          Value: "dev"
+        - Key: "service"
+          Value: "whatsup"
+        - Key: "resource"
+          Value: "api"
+        - Key: "newtag"
+          Value: "monday"
+
+  S3Bucke2:
+   Type: "AWS::S3::Bucket"
+   Properties:
+      PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      Tags:
+        - Key: "environment"
+          Value: "dev"
+        - Key: "service"
+          Value: "whatsup"
+        - Key: "resource"
+          Value: "compute"
+        - Key: "newtag"
+          Value: "monday"

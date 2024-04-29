@@ -1,0 +1,17 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: clone-custom-rules
+        name: Rules for AWS
+        description: Download Organization rules
+        entry: bash -c 'if [ -d ../cfn-guard-rules ]; then cd ../cfn-guard-rules && git pull; else git clone https://github.com/sakethvaliveti1/cfn-guard-rules.git ../cfn-guard-rules; fi'
+        language: system
+-   repo: https://github.com/aws-cloudformation/cfn-lint
+    rev: v0.86.1 # The version of cfn-lint to use
+    hooks:
+    -   id: cfn-lint
+        name: test-me
+        entry: cfn-lint -t ./**/*.yml --append-rules ../cfn-guard-rules/
+        pass_filenames: false
+        verbose: true
+        stages: [pre-push]
