@@ -13,5 +13,5 @@ repos:
     hooks:
     -   id: cfn-lint
         name: test-me
-        entry: cfn-lint -t ./**/*.yml --append-rules /custom-rules/
+        entry: cfn-lint -t ./**/*.yml --append-rules ./custom-rules/
         verbose: true
