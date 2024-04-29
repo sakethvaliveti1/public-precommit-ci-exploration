@@ -1,3 +1,5 @@
+ci:
+    skip: [clone-custom-rules]
 repos:
 -   repo: local
     hooks:
