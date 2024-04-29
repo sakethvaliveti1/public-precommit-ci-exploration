@@ -16,3 +16,4 @@ repos:
         entry: cfn-lint -t ./**/*.yml --append-rules ./custom-rules/
         language: python
         verbose: true
+        stages: [ci, pre-push]
