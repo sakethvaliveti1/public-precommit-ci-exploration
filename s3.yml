@@ -19,7 +19,7 @@ Resources:
         - Key: "resource"
           Value: "api"
         - Key: "newtag"
-          Value: "moAASday"
+          Value: "moday"
 
   S3Bucke2:
    Type: "AWS::S3::Bucket"
