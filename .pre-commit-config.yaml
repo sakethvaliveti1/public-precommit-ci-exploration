@@ -1,3 +1,5 @@
+ci:
+    skip: [clone-custom-rules]
 repos:
 -   repo: local
     hooks:
@@ -11,7 +13,7 @@ repos:
     hooks:
     -   id: cfn-lint
         name: test-me
-        entry: cfn-lint -t ./**/*.yml --append-rules ../cfn-guard-rules/
-        pass_filenames: false
+        entry: cfn-lint -t ./**/*.yml --append-rules ./custom-rules/
+        language: python
         verbose: true
-        stages: [push]
+        stages: [ci, pre-push]

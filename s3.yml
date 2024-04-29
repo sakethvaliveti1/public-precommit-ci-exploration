@@ -10,7 +10,7 @@ Resources:
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
-              SSEAlgorithm: AES256
+              SSEAlgorithm: 
       Tags:
         - Key: "environment"
           Value: "dev"
@@ -19,7 +19,7 @@ Resources:
         - Key: "resource"
           Value: "api"
         - Key: "newtag"
-          Value: "modASADAAay"
+          Value: "modAAASDSADSDASDDAAay"
 
   S3Bucke2:
    Type: "AWS::S3::Bucket"
