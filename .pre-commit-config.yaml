@@ -14,6 +14,5 @@ repos:
     -   id: cfn-lint
         name: test-me
         entry: cfn-lint -t ./**/*.yml --append-rules custom-rules/
-        pass_filenames: false
         verbose: true
         stages: [pre-push]

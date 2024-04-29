@@ -18,8 +18,8 @@ Resources:
           Value: "whatsup"
         - Key: "resource"
           Value: "api"
-        - Key: "newtag"
-          Value: "modAASDASDDAAay"
+        - Key: "newASDtag"
+          Value: "modAAASDSADSDASDDAAay"
 
   S3Bucke2:
    Type: "AWS::S3::Bucket"
