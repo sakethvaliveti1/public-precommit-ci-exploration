@@ -16,4 +16,4 @@ repos:
         entry: cfn-lint -t ./**/*.yml --append-rules ../cfn-guard-rules/
         pass_filenames: false
         verbose: true
-        stages: [push]
+        stages: [pre-push]
