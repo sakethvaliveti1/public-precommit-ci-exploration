@@ -13,7 +13,7 @@ Resources:
         - Key: "resource"
           Value: "storage"
         - Key: "newtag"
-          Value: "monday"
+          Value: "monASDASday"
   MainEgress:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
