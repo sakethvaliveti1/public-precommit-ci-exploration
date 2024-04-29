@@ -15,4 +15,3 @@ repos:
         name: test-me
         entry: cfn-lint -t ./**/*.yml --append-rules custom-rules/
         verbose: true
-        stages: [pre-push]
